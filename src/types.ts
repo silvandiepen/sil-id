@@ -10,12 +10,13 @@ export const IdAlphabet = {
   "0-9": alphabets["09"],
   "a-Z": alphabets.az + alphabets.AZ,
   "a-Z0-9": alphabets.az + alphabets.AZ + alphabets["09"],
+  "a-z0-9": alphabets.az + alphabets["09"],
+  "A-Z0-9": alphabets.AZ + alphabets["09"],
 };
 
 export type IdAlphabet = typeof IdAlphabet[keyof typeof IdAlphabet];
 export interface IdSettings {
-    total?: number;
-    alphabet?: IdAlphabet;
-    format?: String;
-  }
-  
+  total?: number;
+  alphabet?: IdAlphabet | string | (string | IdAlphabet)[];
+  format?: String;
+}
