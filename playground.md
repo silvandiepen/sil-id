@@ -5,7 +5,7 @@
 <script type="module">
 
     import { createApp } from 'https://unpkg.com/petite-vue?module'
-    // import { useId } from  'https://unpkg.com/@sil/id@0.0.3/dist/index.js'
+    import { useId } from  'https://unpkg.com/@sil/id@0.0.4/dist/index.js'
 
     createApp({
 
