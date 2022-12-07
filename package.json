@@ -3,6 +3,7 @@
   "version": "0.0.3",
   "description": "Id creation",
   "main": "dist/index.js",
+  "type": "module",
   "files": [
     "dist"
   ],
@@ -11,6 +12,7 @@
   },
   "scripts": {
     "test": "jest",
+    "build:ts": "tsc",
     "build": "tsup --dts",
     "prepublishOnly": "npm run build && npm run test"
   },
