@@ -1,4 +1,4 @@
-import { useId } from "../src/id";
+import { useId } from "../src";
 import { IdAlphabet } from "../src/types/index";
 
 describe("useId", () => {
