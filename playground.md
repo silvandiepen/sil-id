@@ -9,9 +9,9 @@ projectStyle: /assets/custom.css
 <script type="module">
 
     import { createApp } from 'https://unpkg.com/petite-vue?module'  
-      import prettier from "https://unpkg.com/prettier@2.8.1/esm/standalone.mjs";
-     import parserBabel from "https://unpkg.com/prettier@2.8.1/esm/parser-babel.mjs";
-    import { useId } from  '/id.js'
+    import prettier from "https://unpkg.com/prettier@2.8.1/esm/standalone.mjs";
+    import parserBabel from "https://unpkg.com/prettier@2.8.1/esm/parser-babel.mjs";
+    import { useId } from  'https://unpkg.com/@sil/id@0.0.6/dist/mjs/index.js?module'
 
     createApp({
 
