@@ -1,5 +1,5 @@
-import { useId } from "./id";
-import { IdAlphabet } from "./types";
+import { useId } from "../src/id";
+import { IdAlphabet } from "../src/types/index";
 
 describe("useId", () => {
   it("should return a function", () => {
@@ -159,15 +159,18 @@ describe("ID - custom", () => {
   it("Should return a string with Armenian characters", () => {
     const customAlphabet = "աբգդեզէըթժիլխծկհձղճմյնշոչպջռսվտրցւփքօֆուև";
 
+
+    const customAlphabets =  [customAlphabet, IdAlphabet["0-9"]].join('')
+
     const id = useId({
-      alphabet: [customAlphabet, IdAlphabet['0-9']],
+      alphabet: [customAlphabet, IdAlphabet["0-9"]],
     });
 
     const myIdArray = id().split("");
 
     expect(myIdArray.length).toBe(19);
     expect(myIdArray[4]).toBe("-");
-    expect(myIdArray.find((c: string) => !customAlphabet.includes(c))).toBe(
+    expect(myIdArray.find((c: string) => !customAlphabets.includes(c))).toBe(
       "-"
     );
   });

@@ -1,0 +1,38 @@
+label {
+  display: block;
+}
+input,
+select {
+  display: block;
+  padding: 1em;
+  width: 100%;
+  background-color: var(--ol-background);
+  color: var(--ol-foreground);
+  border: 1px solid var(--ol-foreground);
+  border-radius: var(--ol-border-radius);
+}
+input:focus,
+select:focus {
+  outline: none;
+  border-color: var(--ol-primary);
+}
+
+label + input,
+label + select {
+  margin-top: 1em;
+}
+.input + .input{ margin-top: 2em; }
+.example {
+  font-size: 2em;
+  padding: 2em;
+  text-align: center;
+  display: block;
+}
+.warning {
+ display: block;  padding: 0.5em;
+  background-color: var(--ol-warning);
+  text-align: center;
+}
+.translucent {
+    opacity: .5;
+}

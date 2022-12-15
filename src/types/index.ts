@@ -16,7 +16,7 @@ export const IdAlphabet = {
 
 export type IdAlphabet = typeof IdAlphabet[keyof typeof IdAlphabet];
 export interface IdSettings {
-  total?: number;
-  alphabet?: IdAlphabet | string | (string | IdAlphabet)[];
-  format?: String;
+  total: number;
+  alphabet: IdAlphabet | string | (string | IdAlphabet)[];
+  format: String;
 }
