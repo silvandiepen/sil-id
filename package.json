@@ -2,38 +2,34 @@
   "name": "@sil/id",
   "version": "0.0.6",
   "description": "Id creation",
-  "main": "dist/cjs/index.js",
-  "module": "dist/mjs/index.js",
-  "types": "dist/id.d.ts",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
   "files": [
     "dist"
   ],
-  "exports": {
-    ".": {
-      "import": "./dist/mjs/index.js",
-      "require": "./dist/cjs/index.js"
-    }
-  },
   "scripts": {
     "test": "jest",
-    "prepublishOnly": "npm run build && npm run test",
-    "build": "rm -fr dist/* && tsc -p tsconfig.json && tsc -p tsconfig-cjs.json && ./fixup"
+    "build": "tsup --format cjs,esm  --dts  --clean"
   },
   "keywords": [
-    "create",
-    "small",
-    "id"
+    "Format",
+    "typescript"
   ],
   "author": "Sil van Diepen",
   "license": "MIT",
   "devDependencies": {
-    "@types/jest": "^29.2.3",
-    "@types/node": "^18.11.9",
-    "ts-jest": "^29.0.3",
-    "tsup": "^6.5.0",
-    "typescript": "^4.9.3"
-  },
-  "dependencies": {
-    "jest": "^29.3.1"
+    "@types/jest": "^29.5.2",
+    "jest": "^29.5.0",
+    "ts-jest": "^29.1.0",
+    "tsup": "^7.1.0",
+    "typescript": "^5.3.3"
   }
 }
