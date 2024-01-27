@@ -1,6 +1,6 @@
 {
   "name": "@sil/id",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Id creation",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
